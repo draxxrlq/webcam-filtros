@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Projetinho</title>
+</head>
+<body>
+  <div class="stage">
+    <video id="video" autoplay playsinline muted></video>
+    <canvas id="output" width="640" height="480"></canvas>
+  </div>
+
+  <div class="controls">
+    <button data-filter="none" class="active">normal</button>
+    <button data-filter="invert">inverter</button>
+    <button data-filter="gray">p&b</button>
+    <button data-filter="thermal">termal</button>
+    <button data-filter="pixelate">pixelado</button>
+    <button data-filter="sepia">sépia</button>
+    <button data-filter="edges">contornos</button>
+  </div>
+
+  <div class="status" id="status"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+<script src="filters.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
